@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid;
+    font-size: 14px;
+}
+.headerText{
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+.containerContent{
+    padding: 0 30px 30px 30px;
+}
+.input{
+    margin-right: 10px;
+    padding: 5px;
+    width: 350px;
+}
+.buttonAdd{
+    font-weight: bold;
+    padding: 5px 24px;
+    cursor: pointer; 
+}
+.containerList{
+    margin: 20px 0;
+}
+.buttonClear{
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-weight: bold;
+    cursor: pointer; 
+}

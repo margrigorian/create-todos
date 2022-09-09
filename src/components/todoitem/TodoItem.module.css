@@ -1,0 +1,14 @@
+.todoElContainer{
+    display: flex;
+    padding: 10px 0 5px 0;
+    border-bottom: 1px solid;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.text{
+    width: 420px;
+    cursor: pointer;
+}
