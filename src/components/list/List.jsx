@@ -22,8 +22,10 @@ export default function List() {
                 return state.map((item, i) => i === action.index ? {status: item.status === false ? true : false, text : item.text} : item);
             case "delete element" :
                 return state.filter((item, i) => i !== action.index);
-            default:
+            case "clear completed":
                 return state.filter(item => item.status !== true)
+            default:
+                return state = [];
         }
     }
 
@@ -39,7 +41,11 @@ export default function List() {
                 <div className={style.containerList}>
                     {elelmentsArr.map((item, i) => <TodoItem key={`TodoId-${i}`} todo={item} index={i} dispatch={dispatch} />)}
                 </div>
-                {elelmentsArr.length !== 0 && <button className={style.buttonClear} onClick={() => dispatch({type: "clear"})}>Clear</button>}
+                {elelmentsArr.length !== 0 && 
+                    <div className={style.buttonContainer}>
+                        <button className={style.buttonClear} onClick={() => dispatch({type: "clear completed"})}>Clear completed</button>
+                        <button className={`${style.buttonClear} ${style.clearAll}`} onClick={() => dispatch({type: "clear all"})}>Clear all</button>
+                    </div>}
             </div>
         </div>
     )
