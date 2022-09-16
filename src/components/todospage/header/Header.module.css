@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    background: linear-gradient(to bottom right, white 10%, rgb(214, 191, 171));
+}
+.userCompleted{
+    display: flex;
+}
+.name{
+    font-weight: bold;
+    padding-right: 7px;
+}
+.buttonLogout{
+    padding: 10px 20px;
+    background-color: rgb(43, 42, 42);
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
