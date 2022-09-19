@@ -14,13 +14,15 @@ export const authorization = (name, email) => {
 
 export const logout = {type: "user log out"};
 
-export const addTodo = (inputText) => {
-    return {type: "add todo", inputText}; 
+export const addTodo = (inputText, description) => {
+    return {type: "add todo", inputText, description}; 
 } 
 
 export const changeStatus = (index) => {
     return {type: "change status", index}; 
 } 
+
+export const changeDescription = (index, description) => ({type: "change description", index, description});
 
 export const deleteEl = (index) => {
     return {type: "delete element", index}; 

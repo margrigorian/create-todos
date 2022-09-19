@@ -1,0 +1,36 @@
+.containerModal{
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    /* background-color: rgb(43, 41, 41,0.8); */
+    top: 0;   
+}
+.modalWindow{
+    margin: 213px 0 0 490px;
+}
+.changeTextarea{
+    width: 350px;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(62, 61, 61);
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+.buttonsContainer{
+    display: flex;
+    margin-left: 238px;
+}
+.modalButton{
+    margin-right: 10px;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(225, 209, 194);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}

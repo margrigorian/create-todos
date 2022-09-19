@@ -9,7 +9,7 @@ function App() {
 
   return (
       <div className="App">
-        {userInfo.name === "" || userInfo.email === "" ? <StartPage /> : <TodosPage />}
+        {userInfo === null ? <StartPage /> : <TodosPage />}
       </div>
   );
 }

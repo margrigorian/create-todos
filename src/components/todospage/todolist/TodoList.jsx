@@ -8,6 +8,7 @@ import { addTodo, clearCompleted, clearAll } from '../../../store/actions';
 
 export default function TodoList() {
     const [inputText, setInputText] = useState("");
+    const [description, setDescription] = useState("");
     const elementsArr = useSelector((state) => state.todos);
     const dispatch = useDispatch();
 
@@ -15,10 +16,10 @@ export default function TodoList() {
     // const changeStatus = useCallback(() => {
     // return dispatch({type: "change status"});
     // }, [])
-
+    
     function add() {
         if(inputText !== "") {
-            return dispatch(addTodo(inputText));
+            return dispatch(addTodo(inputText, description));
         }
     }
 
@@ -27,11 +28,22 @@ export default function TodoList() {
             <p className={style.headerText}>TODOS</p>
             <div className={style.containerContent}>
                 <div>
-                    <input  className={style.input} value={inputText} onChange={(e) => setInputText(e.target.value)} />
+                    <input 
+                        className={style.input} 
+                        placeholder="To do ..." 
+                        value={inputText} 
+                        onChange={(e) => setInputText(e.target.value)} />
                     <button className={style.buttonAdd} onClick={() => {
                         add();
                         setInputText("");
+                        setDescription("");
                     }}>Add</button>
+                    <textarea 
+                        className={style.description} 
+                        placeholder="Description" 
+                        value={description} 
+                        onChange={(e) => setDescription(e.target.value)}>
+                    </textarea>
                 </div>
                 <div className={style.containerList}>
                     {elementsArr.map((item, i) => <TodoItem key={`TodoId-${i}`} todo={item} index={i} dispatch={dispatch} />)}

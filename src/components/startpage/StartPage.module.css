@@ -25,6 +25,7 @@
     /* font-weight: bold;     */
     padding: 8px 20px;
     background-color: rgb(43, 42, 42);
+    border: none;
     color: white;
     border-radius: 3px;
     cursor: pointer;

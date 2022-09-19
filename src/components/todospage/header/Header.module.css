@@ -17,6 +17,7 @@
     padding: 10px 20px;
     background-color: rgb(43, 42, 42);
     border-radius: 3px;
+    border: 2px solid grey;
     color: white;
     font-weight: bold;
     cursor: pointer;

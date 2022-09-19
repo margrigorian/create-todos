@@ -17,6 +17,12 @@
     padding: 5px;
     width: 350px;
 }
+.description{
+    margin-top: 10px;
+    padding: 5px;
+    width: 350px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .buttonAdd{
     font-weight: bold;
     padding: 5px 24px;
@@ -44,3 +50,4 @@
     border: 2px solid grey;
     border-radius: 2px;
 }
+
