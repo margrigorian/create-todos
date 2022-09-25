@@ -10,8 +10,10 @@ export default function todosReducer(state = [], action) {
             return state.filter((item, i) => i !== action.index);
         case "clear completed" :
             return state.filter(item => item.status !== true);
+        case "clear all state" :
+            return null;   
         default:
-            return state = [];
+            return state || [];
     }
 }
 

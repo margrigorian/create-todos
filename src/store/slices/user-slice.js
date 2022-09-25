@@ -6,9 +6,9 @@ export default function userReducer(state = null, action) {
                 email: action.email
             }  
         case "user log out" :
-            return state = null; // передался глобальный state и обнулился? Тогда почему todos не стал null?
+            return null;
         default :
-            return state;
+            return state || null;
     }
 }
         

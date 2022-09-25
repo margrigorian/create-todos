@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from "./Header.module.css";
 import { logout } from '../../../store/actions';
+import { clearState } from '../../../store/actions';
 
 export default function Header() {
     const state = useSelector((state) => state);
@@ -14,7 +15,14 @@ export default function Header() {
                         <p className={style.name}>{state.user.name}</p>
                         <p>| Completed {complited} / {state.todos.length}</p>
                     </div>
-                    <button className={style.buttonLogout} onClick={() => dispatch(logout)}>Log Out</button>
+                    <button 
+                        className={style.buttonLogout} 
+                        onClick={() => {
+                            dispatch(logout)
+                            dispatch(clearState)
+                        }}>
+                        Log Out
+                    </button>
             </header>
     )
 }

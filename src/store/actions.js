@@ -13,6 +13,7 @@ export const authorization = (name, email) => {
     } 
 
 export const logout = {type: "user log out"};
+export const clearState = {type: "clear all state"};
 
 export const addTodo = (inputText, description) => {
     return {type: "add todo", inputText, description}; 
